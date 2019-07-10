@@ -2732,7 +2732,14 @@
 							<div class='col-auto flex-grow-1 pr-3'>
 								<div class="form-group">
 									<label for="search_input" class='sr-only'>Search</label>
-									<input type="search" value='engineering' class="form-control" id="search_input" placeholder="Search">
+									<input
+										type="search"
+										value='engineering'
+										class="form-control"
+										id="search_input"
+										placeholder="Search"
+										on="input-debounced:AMP.setState({currentSearchTerm:event.value})"
+									>
 								</div>
 							</div>
 							<div class='col-auto'>
@@ -2749,7 +2756,7 @@
 			<div class='row no-gutters'>
 				<div class='col-7 mx-auto'>
 					<template type='amp-mustache' id='search_result_template'>
-						<div class='p-4 bg-gray-50 text-gray-500'>
+						<div class='p-4 bg-gray-50 text-gray-500 mb-2'>
 							<a class='font-size-22px font-weight-light text-gray-500 text-underline' href='{{url}}'>
 								{{title}}
 							</a>
@@ -2758,7 +2765,8 @@
 					<amp-list
 						layout='fixed-height'
 						height=100
-						src="https://raw.githubusercontent.com/scofennell/amp-demo/master/data/results.json"
+						src="https://scofennell.github.io/results.json"
+						[src]="'https://scofennell.github.io/results.json?q=' + currentSearchTerm"
 						template="search_result_template"
 						binding="no"
 					>
