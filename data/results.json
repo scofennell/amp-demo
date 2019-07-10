@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "title": "[Toptal Engineering Blog] Apache Cordova Tutorial: Developing Mobile Applications with Cordova",
+      "url": "https://www.toptal.com/mobile/developing-mobile-applications-with-apache-cordova"
+    },
+    {
+      "title": "[Toptal Engineering Blog] Developing for the Cloud in the Cloud: BigData Development with Docker in AWS",
+      "url": "https://www.toptal.com/big-data/developing-in-the-cloud-with-docker-and-aws"
+    },
+    {
+      "title": "[Toptal Engineering Blog] Survey of the Best Online Mapping Tools for Web Developers: The Roadmap to Roadmaps",
+      "url": "https://www.toptal.com/web/the-roadmap-to-roadmaps-a-survey-of-the-best-online-mapping-tools"
+    },
+    {
+      "title": "[Toptal Engineering Blog] How Hibernate Almost Ruined My Career",
+      "url": "https://www.toptal.com/java/how-hibernate-ruined-my-career"
+    }
+  ]
+}
