@@ -2723,7 +2723,7 @@
 		<div class="search_form container-fluid bg-gray-100">
 			<div class="row no-gutters">
 				<div class="col-12 col-sm-7 mx-auto">
-					<form class="py-4" action="index.html" target="_top">
+					<div class="py-4">
 						<div class='row no-gutters flex-nowrap align-items-center'>
 							<div class='col-auto pr-3 line-height-0'>
 								<amp-img src="images/amp.png" alt="algo" width="45" height="45" class="" layout="intrinsic">
@@ -2743,11 +2743,16 @@
 								</div>
 							</div>
 							<div class='col-auto'>
-								<button class='text-uppercase btn btn-secondary btn-sm'>Search</button>
+								<button
+									class='text-uppercase btn btn-secondary btn-sm'
+									on="tap:myList.refresh"
+								>
+									Search
+								</button>
 							</div>
 
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -2763,6 +2768,7 @@
 						</div>
 					</template>
 					<amp-list
+						id='myList'
 						layout='fixed-height'
 						height=100
 						src="https://codingthat-quick-json-back-end-2.glitch.me/posts?q=engineering&format=items"
