@@ -2874,11 +2874,20 @@
 			<div class='row no-gutters'>
 				<div class='col col-md-7 mx-auto'>
 					<template type='amp-mustache' id='search_result_template'>
-						<div class='p-4 bg-gray-50 text-gray-500 mb-2'>
-							<a class='font-size-22px font-weight-light text-gray-500 text-underline' href='{{url}}'>
-								{{title}}
-							</a>
-						</div>
+						{{#items}}
+							<div class='p-4 bg-gray-50 text-gray-500 mb-2'>
+								<a class='font-size-22px font-weight-light text-gray-500 text-underline' href='{{url}}'>
+									{{title}}
+								</a>
+							</div>
+						{{/items}}
+						{{^items}}
+							<div class='p-4 bg-gray-50 text-gray-500 mb-2'>
+								<span class='font-size-22px font-weight-light text-gray-500'>
+									No results :(
+								</span>
+							</div>
+						{{/items}}						
 					</template>
 					<amp-list
 						id='myList'
@@ -2888,6 +2897,8 @@
 						[src]="'https://codingthat-quick-json-back-end-2.glitch.me/posts?q=' + currentSearchTerm + '&format=items'"
 						template="search_result_template"
 						binding="no"
+						single-item
+						items="."
 					>
 					</amp-list>
 				</div>
